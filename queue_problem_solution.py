@@ -1,6 +1,4 @@
-from collections import deque
-
-clientes_queue = deque()
+clientes_queue = []
 
 # First client arrives to be attended
 new_client = "Yang Li"
@@ -20,5 +18,5 @@ clientes_queue.append("Niàn zhēn")
 clientes_queue.append("Hóng tāo")
 
 # As soon as one of the attendents is available send message to user phone
-next_client = clientes_queue.popleft()
+next_client = clientes_queue.pop(0)
 print(next_client + " we're ready to attend you.")
