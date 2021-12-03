@@ -27,7 +27,7 @@ There are many alternatives of approaches to work with Queues in Python, among t
 
 Creating your own class is a very cumbursome alternative, despite being very efficient. But since we have simpler alternatives we will not discuss it in this tutorial.
 
-So, let's discuss the two other alternatives suggested.
+We're goint to discuss the implementation of a queue using the List built-in data structure.
 
 ### About Time Complexity
 It's also important to emphasize that although using a List is simple to implement and to work, there is a problem of efficiency. Because whenever you add a new item to the List, since Lists use indexes, the List will need to update all the indexes of all the items of the List. That gives a List a O(n) efficiency.
@@ -35,24 +35,13 @@ It's also important to emphasize that although using a List is simple to impleme
 Now, because a deque does not face the same problem of needing to update indexes, its time complexity is O(1). In a deque, an item is added directly to its rear and we can pop it directly from its front.
 
 ## Implementing a Queue
-### With List
-As simple as a List.
+
 ```python
 # We can initialize a queue by creating a simple list
 queue = []
 ```
 
-### With Deque
-We need to import the Deque from Collections and then just instantiate the Class.
-```python
-# We will need to import Deque from Collections
-from collections import deque
-
-# Then we can initialize our queue
-queue = deque()
-```
 ## Enqueue
-### With List
 Adding an item to a queue is called enqueuing. To do it with our List we're going to use the `.append()` method.
 ```python
 queue = []
@@ -62,22 +51,9 @@ queue.append("Adam")
 queue.append("Brandon")
 queue.append("Carl)
 ```
-### With Deque
-Lists and Deques use the same method to enqueue a new item.
-
-```python
-from collections import deque
-
-queue = deque()
-
-# Use the 'append()' method to enqueue a new item to the rear of your queue
-queue.append("Adam")
-queue.append("Brandon")
-queue.append("Carl)
-```
-
+### Time Complexity
+Because appending an item to a List will be done by simply adding a new item to the rear of the list, its time complexity is of O(1).
 ## Dequeue
-### With List
 Removing an item from a queue is called dequeing. We do it with the `.pop(0)` method for it. **Important:** we need to use the index 0 when popping so we grab the first item in the List.
 ```python
 queue = []
@@ -92,30 +68,12 @@ first_client = queue.popl(0) # Adam
 second_client = queue.popl(0) # Brandon
 third_client = queue.popl(0) # Carl
 ```
-### With Deque
-With a deque we're going to use the `.popleft()` method to deque.  **Important:** there is no index here.
-
-**Important:** we want to remove the item on the front of our queue, that's why we can't use the `.pop()` method, that would remove the item from the gear - the last one added.
-
-```python
-from collections import deque
-
-queue = deque()
-
-queue.append("Adam")
-queue.append("Brandon")
-queue.append("Carl")
-
-# Use the 'popleft()' method to dequeue an item from the front of your queue
-first_client = queue.popleft() # Adam
-second_client = queue.popleft() # Brandon
-third_client = queue.popleft() # Carl
-```
+### Time Complexity
+Now, when we're dequeueing using a List, time complexity changes a little. Since a list has indexes and we need to remove the first item of the List, our List class is going to need to loop through the whole list updating the indexes. This will become a time complexity of O(n).
 
 
 ## Length
 We can find out the length of our queue - both for List and for Deque - by using the `len()` function. See examples below.
-### With List
 ```python
 queue = []
 
@@ -127,21 +85,7 @@ queue.append("Carl")
 
 print(len(queue)) # Should print 3 (three)
 ```
-### With Deque
 
-```python
-from collections import deque
-
-queue = deque()
-
-print(len(queue)) # Should print 0 (zero)
-
-queue.append("Adam")
-queue.append("Brandon")
-queue.append("Carl")
-
-print(len(queue)) # Should print 3 (three)
-```
 ## Example
 In Brazil, when we go to the doctor (public healthcare) we register our names and general health issues with a receptionist, than we need to wait our names to be called as soon as the doctor is available for us.
 
