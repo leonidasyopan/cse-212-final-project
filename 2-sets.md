@@ -195,3 +195,6 @@ After you have your own solution you can compare it with the proposed one: [Solu
 
 
 [Back to Welcome Page](0-welcome.md)
+
+| [<< Go to Queues](1-queues.md) | [Go to Trees >>](2-trees.md)  |
+|--------------------------------|-------------------------------|
