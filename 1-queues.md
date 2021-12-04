@@ -88,7 +88,7 @@ queue.append("Carl")
 print(len(queue)) # Should print 3 (three)
 ```
 
-## Example
+## Problem Example
 In Brazil, when we go to the doctor (public healthcare) we register our names and general health issues with a receptionist, than we need to wait our names to be called as soon as the doctor is available for us.
 
 We can use Python and queues to implement the system that calls the patient's name, and it could look something like this:

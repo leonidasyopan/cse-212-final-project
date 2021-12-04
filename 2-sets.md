@@ -175,8 +175,73 @@ fruits_and_vegetables = fruits.symmetric_difference(vegetables)
 # New set: {'apple', 'carrot'}
 ```
 
-## Example
-Some text
+## Problem Example
+John has been collecting Panini's FIFA World Cup 2018 stickers for the all the National Teams of Football. He already has a huge collection, but he is still trying to complete Brazil's National Team. He is only missing 3 of the 23 players that were drafted for the competion.
+
+Since there are many people around the world also collection, and many of them are willing to exchange stickers they might have repeated, he decided to create a simple Python Program that allows people to check whether their repeated cards match the ones he wants to trade for.
+
+The trader just needs to insert the name of the player of the sticker, and the program will allow the trade to happen or tell him/her whether John already have the card.
+
+Code:
+```python
+johns_stickers = {
+    "Alisson",
+    "Thiago Silva",
+    "Miranda",
+    "Pedro Geromel",
+    "Casemiro",
+    "Douglas Costa",
+    "Renato August",
+    "Gabriel Jesus",
+    "Neymar	5 February",
+    "Philippe Coutinho",
+    "Marcelo",
+    "Marquinhos",
+    "Danilo",
+    "Paulinho",
+    "Cássio",
+    "Fred",
+    "Willian",
+    "Roberto Firmino",
+    "Taison",
+    "Fagner"
+}
+
+repeated_stickers = {
+    "Thiago Silva",
+    "Miranda",
+    "Pedro Geromel",
+    "Douglas Costa",
+    "Gabriel Jesus",
+    "Philippe Coutinho",
+    "Marcelo",
+    "Marquinhos",
+    "Paulinho",
+    "Fred",
+    "Willian",
+    "Taison",
+    "Fagner"
+}
+
+missing_stickers = {"Filipe Luis", "Fernandinho", "Ederson"}
+
+player = input("Enter your sticker's player name: ")
+
+sought_card = player in missing_stickers
+
+owned_card = player in johns_stickers
+
+if not owned_card and sought_card:
+    johns_stickers.add(player)
+    missing_stickers.remove(player)
+    print("Thanking you for your card.")
+
+    random_player_01 = repeated_stickers.pop()
+    random_player_02 = repeated_stickers.pop()
+    print("I can give you my " + random_player_01 + " or " + random_player_02)
+else:
+    print("Sorry, I already have that card.")
+```
 
 ## Problem to Solve
 Some text
