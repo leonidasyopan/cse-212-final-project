@@ -244,16 +244,14 @@ else:
 ```
 
 ## Problem to Solve
-Some text
+A store (you cna pick the segment) has at least two categories of products and keeps a list of items available at the store for each of these categories.
+
+Create a program that asks the user for the name of a new item for each category. If the item is already listed, inform the user about it, if not, add the item to the proper category.
+
+In the end print each item available at the store (including all items from all categories).
 
 
-
-```python
-# Some code example
-```
-
-
-After you have your own solution you can compare it with the proposed one: [Solution](module_02.py)
+**After you have your own solution you can compare it with the proposed one: [Solution](set_problem_solution.py)**
 
 ## References to Further Study
 1. Python Sets - https://www.w3schools.com/python/python_sets.asp
