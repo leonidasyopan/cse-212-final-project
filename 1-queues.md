@@ -1,4 +1,4 @@
-| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](1-sets.md)  |
+| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](2-sets.md)  |
 |--------------------------------|-------------------------------|
 # Queues
 
@@ -135,6 +135,6 @@ Create a simple program that simulates the behavior of registering a new client 
 
 [Back to Welcome Page](0-welcome.md)
 
-| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](1-sets.md)  |
+| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](2-sets.md)  |
 |--------------------------------|-------------------------------|
 
