@@ -1,3 +1,5 @@
+| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](1-sets.md)  |
+|--------------------------------|-------------------------------|
 # Queues
 
 ## What is a Queue?
@@ -133,5 +135,6 @@ Create a simple program that simulates the behavior of registering a new client 
 
 [Back to Welcome Page](0-welcome.md)
 
-
+| [<< Go to Welcome](0-welcome.md) | [Go to Sets >>](1-sets.md)  |
+|--------------------------------|-------------------------------|
 

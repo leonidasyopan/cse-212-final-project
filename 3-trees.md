@@ -1,3 +1,5 @@
+| [<< Go to Sets](2-sets.md) | [Go to Conclusion >>](4-conclusion.md)  |
+|--------------------------------|-------------------------------|
 # Trees
 
 ## What is a Tree?
@@ -27,3 +29,6 @@ Some text
 After you have your own solution you can compare it with the proposed one: [Solution](module_03.py)
 
 [Back to Welcome Page](0-welcome.md)
+
+| [<< Go to Sets](2-sets.md) | [Go to Conclusion >>](4-conclusion.md)  |
+|--------------------------------|-------------------------------|
