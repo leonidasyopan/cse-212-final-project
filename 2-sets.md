@@ -1,3 +1,5 @@
+| [<< Go to Queues](1-queues.md) | [Go to Trees >>](2-trees.md)  |
+|--------------------------------|-------------------------------|
 # Sets
 ## What is a Set?
 A set is one of the built-in data structures of python. It creates a collection of unordered items, this collection is partially immutable/unchangeable - this means that "once a set is created, you cannot change its items, but you can remove items and add new items"(1) to the set.
