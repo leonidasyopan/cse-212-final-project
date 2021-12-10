@@ -61,32 +61,83 @@ class BST:
         if self.root is None:
             self.root = BST.Node(data)
         else:
-            self._insert(data, self.root)  # It's important to start at the root
+            self._insert(data, self.root)
 
     def _insert(self, data, node):
-        # Left side
         if data < node.data:
-            if node.left is None: # Base case
+            if node.left is None:
                 node.left = BST.Node(data)
-            else:                 # Recursion
+            else:
                 self._insert(data, node.left)
-
-        # Right side
         elif data > node.data:
             if node.right is None:
                 node.right = BST.Node(data)
             else:
                 self._insert(data, node.right)
 
-    def __search__(self, data):
-        return self._search(data, self.root)  # It's important to start at the root
+    def __contains__(self, data):
+        return self._contains(data, self.root)
 
-    def _search(self, data, node):
+    def _contains(self, data, node):
+
+        if node.data == data:
+            return True
+        elif data < node.data:
+            if node.left is None:
+                return False
+            else:
+                return self._contains(data, node.left)
+        else:
+            if node.right is None:
+                return False
+            else:
+                return self._contains(data, node.right)
+
+    def __iter__(self):
+        yield from self._traverse_forward(self.root)
+
+    def _traverse_forward(self, node):
         if node is not None:
-            if data == node.data:
-                return True
-            return self._search(data, node.left)
-            return self._search(data, node.right)
+            yield from self._traverse_forward(node.left)
+            yield node.data
+            yield from self._traverse_forward(node.right)
+
+    def __reversed__(self):
+        yield from self._traverse_backward(self.root)
+
+    def _traverse_backward(self, node):
+        if node is not None:
+            yield from self._traverse_backward(node.right)
+            yield node.data
+            yield from self._traverse_backward(node.left)
+
+    def get_height(self):
+        if self.root is None:
+            return 0
+        else:
+            return self._get_height(self.root)
+
+    def _left_height(self, node):
+        if node is None:
+            return 0
+        else:
+            return 1 + self._left_height(node.left)
+
+    def _right_height(self, node):
+        if node is None:
+            return 0
+        else:
+            return 1 + self._right_height(node.right)
+
+    def _get_height(self, node):
+        if node is None:
+            return 0
+        else:
+            left_height = self._left_height(node)
+            right_height = self._right_height(node)
+            higher = left_height if left_height > right_height else right_height
+
+            return higher
 ```
 
 ## Example
@@ -123,9 +174,7 @@ else:
 
 ```
 ## Problem to Solve
-Now you need to write a program for a school to keep track of the name of all the students who enlist to study there.
-
-You can follow the same pattern we had before.
+Now you need to write a program for a school to keep track of the name of all the students who enlist to study there. You can follow the same pattern we had before.
 
 Please provide the total number of students after the insertion.
 
